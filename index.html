@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#741015">
   <meta name="format-detection" content="telephone=no">
   <title>好铺好房，「租」遇柘城｜柘城农商银行优质房源招租</title>
-  <meta name="description" content="柘城农商银行精选15套优质房源对外招租，涵盖商业用房、办公空间与宜居住房，前2套可查看京东资产详情。">
+  <meta name="description" content="柘城农商银行精选15套商业用房对外招租，真实面积与京东资产参考价，点击图片查看房源详情。">
   <meta property="og:title" content="好铺好房，「租」遇柘城">
-  <meta property="og:description" content="柘城农商银行15套优质房源对外招租，前2套支持查看京东资产详情。">
+  <meta property="og:description" content="柘城农商银行15套商业用房对外招租，真实面积与参考价，点击图片查看京东详情。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -687,17 +687,11 @@
     }
 
     .filters {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
       gap: 7px;
-      margin: 17px -16px 0;
-      padding: 0 16px 2px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .filters::-webkit-scrollbar {
-      display: none;
+      margin: 17px 0 0;
+      padding: 0;
     }
 
     .filter {
@@ -1381,12 +1375,6 @@
         padding-left: 22px;
       }
 
-      .filters {
-        margin-right: -22px;
-        margin-left: -22px;
-        padding-right: 22px;
-        padding-left: 22px;
-      }
 
       .notice {
         margin-right: 22px;
@@ -1395,6 +1383,10 @@
 
       .property-grid {
         gap: 14px;
+      }
+
+      .filters {
+        grid-template-columns: repeat(5, max-content);
       }
 
       .card-body {
@@ -1492,12 +1484,6 @@
         padding-left: 13px;
       }
 
-      .filters {
-        margin-right: -13px;
-        margin-left: -13px;
-        padding-right: 13px;
-        padding-left: 13px;
-      }
 
       .property-grid {
         gap: 10px;
@@ -1562,11 +1548,11 @@
       </div>
 
       <div class="hero-content">
-        <div class="hero-kicker">银行直租 · 优质房源</div>
+        <div class="hero-kicker">银行发布 · 优质商业资产</div>
         <h1>好铺好房<br><span class="gold">「租」</span>遇柘城</h1>
         <p class="hero-copy">
-          <span><strong>15 套精选房源</strong>，涵盖商铺、办公与住房。</span>
-          <span>好位置不等人，诚邀您实地看一看。</span>
+          <span><strong>15 套商业用房</strong>，真实面积、真实参考价。</span>
+          <span>好位置不等人，点击图片查看详情。</span>
         </p>
         <div class="hero-actions">
           <a class="btn-gold" href="#listings">
@@ -1580,7 +1566,7 @@
       </div>
 
       <div class="hero-footnote" aria-hidden="true">
-        <span>BANK DIRECT LEASE</span>
+        <span>BANK ASSET SHOWCASE</span>
         <span>15 SELECTED PROPERTIES</span>
       </div>
     </header>
@@ -1590,7 +1576,7 @@
         <div class="info-card">
           <div class="info-head">
             <h2 id="info-title">基本信息</h2>
-            <span>LEASING INFORMATION</span>
+            <span>ASSET INFORMATION</span>
           </div>
           <dl class="info-grid">
             <div class="info-item">
@@ -1603,7 +1589,7 @@
             </div>
             <div class="info-item">
               <dt>房源类型</dt>
-              <dd>商业 / 办公 / 住房</dd>
+              <dd>商业用房</dd>
             </div>
             <div class="info-item">
               <dt>分布区域</dt>
@@ -1612,18 +1598,18 @@
           </dl>
           <div class="info-note">
             <span>价格说明</span>
-            <strong>2 套参考价</strong>
+            <strong>15 套均为参考价</strong>
             <span class="dot">·</span>
-            <span>其余月租 1,500 – 5,000 元</span>
+            <span>具体以京东资产详情页为准</span>
           </div>
         </div>
       </section>
 
       <section class="story" aria-labelledby="story-title">
         <p class="story-kicker">A PLACE FOR A BETTER LIFE</p>
-        <h2 id="story-title">好铺养生意，<em>好房暖生活</em></h2>
+        <h2 id="story-title">好铺养生意，<em>资产有底气</em></h2>
         <p class="story-copy">
-          一间好铺，是生意的底气；一处好房，是生活的归处。柘城农商银行精选 15 套优质房源，覆盖商业用房、办公空间与宜居住房，分布于城区多处便利地段。无论是开店创业、办公拓展，还是安家生活，都欢迎您亲临现场，看一看位置，也看一看未来的可能。
+          一间好铺，是生意的底气；一处好资产，是经营的根基。柘城农商银行精选 15 套商业用房，分布于华盛新城、中海花园、金帝新城与中原大街等区域，建筑面积从 89.79㎡ 到 7,310.87㎡，可满足不同经营与选址需求。点击房源图片即可查看京东资产详情，欢迎实地看一看。
         </p>
         <div class="benefits">
           <div class="benefit">
@@ -1632,7 +1618,7 @@
                 <path d="M4 10.2 12 4l8 6.2M5.8 9.3V20h12.4V9.3M9.4 20v-5.3h5.2V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <h3>银行直租</h3>
+            <h3>银行发布</h3>
             <p>信息规范透明</p>
           </div>
           <div class="benefit">
@@ -1644,18 +1630,17 @@
                 <rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1" stroke="currentColor" stroke-width="1.5"/>
               </svg>
             </span>
-            <h3>多元空间</h3>
-            <p>商业 · 办公 · 住房</p>
+            <h3>面积多样</h3>
+            <p>89.79 – 7,310.87㎡</p>
           </div>
           <div class="benefit">
             <span class="benefit-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21s6.5-5.4 6.5-11a6.5 6.5 0 1 0-13 0C5.5 15.6 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 5h5v5M19 5l-8 8M19 13.5V19H5V5h5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <h3>便捷看房</h3>
-            <p>到店预约咨询</p>
+            <h3>京东详情</h3>
+            <p>点击图片查看</p>
           </div>
         </div>
       </section>
@@ -1666,20 +1651,23 @@
           <h2 id="list-title">精选房源</h2>
           <span class="result-pill">共 <b id="result-count">15</b> 套</span>
         </div>
-        <p class="list-subtitle">15 套房源，前 2 套可点击图片查看京东资产详情。</p>
+        <p class="list-subtitle">15 套商业用房，点击图片查看京东资产详情。</p>
 
-        <div class="filters" role="group" aria-label="按房源类型筛选">
+        <div class="filters" role="group" aria-label="按房源位置筛选">
           <button class="filter" type="button" data-filter="all" aria-pressed="true" aria-controls="property-grid">
             全部 <span>15</span>
           </button>
-          <button class="filter" type="button" data-filter="shop" aria-pressed="false" aria-controls="property-grid">
-            商业用房 <span>6</span>
+          <button class="filter" type="button" data-filter="huasheng" aria-pressed="false" aria-controls="property-grid">
+            华盛新城 <span>10</span>
           </button>
-          <button class="filter" type="button" data-filter="office" aria-pressed="false" aria-controls="property-grid">
-            办公空间 <span>5</span>
+          <button class="filter" type="button" data-filter="zhonghai" aria-pressed="false" aria-controls="property-grid">
+            中海花园 <span>2</span>
           </button>
-          <button class="filter" type="button" data-filter="home" aria-pressed="false" aria-controls="property-grid">
-            宜居住房 <span>4</span>
+          <button class="filter" type="button" data-filter="jindi" aria-pressed="false" aria-controls="property-grid">
+            金帝新城 <span>1</span>
+          </button>
+          <button class="filter" type="button" data-filter="zhongyuan" aria-pressed="false" aria-controls="property-grid">
+            中原大街 <span>2</span>
           </button>
         </div>
 
@@ -1697,7 +1685,7 @@
         </svg>
         <div>
           <h3>温馨提示</h3>
-          <p>本页面房源信息及图片来源于公开资料或场景示意，仅供参考，不构成要约。前 2 套房源信息及图片来源于京东资产交易平台，展示其参考价值起始价；其余房源为示意月租金。具体面积、价格、租赁条件及可租状态以实际看房、京东资产详情页及双方签署的租赁合同为准。</p>
+          <p>本页面房源信息及图片均来源于京东资产交易平台，页面展示的参考价值为起始价，实际区间以详情页为准，内容仅供参考，不构成要约。具体面积、价格、租赁或交易条件及可租可售状态，以实际看房、京东资产详情页及双方签署的正式合同为准。</p>
         </div>
       </section>
     </main>
@@ -1709,13 +1697,13 @@
       </div>
       <p class="footer-slogan">扎根柘城 · 服务城乡</p>
       <div class="footer-line" aria-hidden="true"></div>
-      <p class="footer-copy">© 2026 柘城农商银行　房源招租宣传展示</p>
+      <p class="footer-copy">© 2026 柘城农商银行　房源资产宣传展示</p>
     </footer>
 
     <div class="bottom-bar" aria-label="预约看房">
       <div class="bar-info">
-        <strong>精选房源 15 套</strong>
-        <span>银行直租 · 欢迎咨询</span>
+        <strong>商业用房 15 套</strong>
+        <span>银行发布 · 京东资产详情</span>
       </div>
       <button class="bar-btn" type="button" data-open-contact>
         预约看房
@@ -1770,7 +1758,7 @@
         </div>
       </div>
 
-      <p class="sheet-tip">温馨提示：房源面积、价格、租金及租赁条件以实际情况、京东资产详情页及双方签署的租赁合同为准。</p>
+      <p class="sheet-tip">温馨提示：房源面积、参考价及租赁或交易条件以实际情况、京东资产详情页及双方签署的正式合同为准。</p>
       <button class="sheet-ok" type="button" data-close-contact>我知道了</button>
     </div>
   </dialog>
@@ -1779,42 +1767,189 @@
     (() => {
       const properties = [
         {
-          id: 1,
-          type: "shop",
+          id: "181085",
+          location: "huasheng",
+          locationName: "华盛新城",
           typeName: "商业用房",
           address: "学苑路南侧华盛新城23幢01号1-2层商铺",
           area: 89.79,
-          priceType: "reference",
           priceText: "¥68.91万起",
           priceFull: "参考价值 68.913196万–75.804516万",
           img: "assets/images/jd-181085.jpg",
           link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572144303#/detail/181085&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
         },
         {
-          id: 2,
-          type: "shop",
+          id: "181081",
+          location: "zhonghai",
+          locationName: "中海花园",
           typeName: "商业用房",
           address: "淮海路东侧中海花园15幢103铺",
           area: 1986.28,
-          priceType: "reference",
           priceText: "¥964.34万起",
-          priceFull: "参考价值 964.343744万–1060.778118万",
+          priceFull: "参考价值 964.343744万–1,060.778118万",
           img: "assets/images/jd-181081.jpg",
           link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572199473#/detail/181081&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
         },
-        { id: 3,  type: "office", typeName: "办公空间", address: "学苑路东段商务楼3层",             rent: 2800, area: 120, img: "assets/images/property-06.jpg" },
-        { id: 4,  type: "shop",   typeName: "临街商铺", address: "中原大街中段路南",                 rent: 4200, area: 45,  img: "assets/images/property-01.jpg" },
-        { id: 5,  type: "home",   typeName: "宜居住房", address: "春水路南段春水苑3号楼",           rent: 1600, area: 88,  img: "assets/images/property-12.jpg" },
-        { id: 6,  type: "office", typeName: "办公空间", address: "黄山路南段临街综合楼5层",         rent: 3200, area: 150, img: "assets/images/property-07.jpg" },
-        { id: 7,  type: "shop",   typeName: "临街商铺", address: "春水路与文庙街交叉口",             rent: 3600, area: 92,  img: "assets/images/property-03.jpg" },
-        { id: 8,  type: "office", typeName: "办公空间", address: "长江路与上海路交会处",             rent: 2600, area: 86,  img: "assets/images/property-08.jpg" },
-        { id: 9,  type: "home",   typeName: "宜居住房", address: "容湖路南段临湖小区",               rent: 1800, area: 86,  img: "assets/images/property-13.jpg" },
-        { id: 10, type: "shop",   typeName: "临街商铺", address: "上海路北段沿街商铺",               rent: 5000, area: 76,  img: "assets/images/property-04.jpg" },
-        { id: 11, type: "office", typeName: "办公空间", address: "丹阳路与中原大街交会处",           rent: 3500, area: 200, img: "assets/images/property-09.jpg" },
-        { id: 12, type: "home",   typeName: "宜居住房", address: "学府路与和平街交叉口",             rent: 1600, area: 110, img: "assets/images/property-14.jpg" },
-        { id: 13, type: "shop",   typeName: "临街商铺", address: "丹阳路中段临街商铺",               rent: 4500, area: 55,  img: "assets/images/property-05.jpg" },
-        { id: 14, type: "office", typeName: "办公空间", address: "行政新区学苑路北侧",               rent: 3000, area: 80,  img: "assets/images/property-10.jpg" },
-        { id: 15, type: "home",   typeName: "宜居住房", address: "迎宾大道中段迎宾花园",             rent: 2200, area: 135, img: "assets/images/property-15.jpg" }
+        {
+          id: "181083",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城17幢01号1-2层商铺",
+          area: 1167.14,
+          priceText: "¥897.50万起",
+          priceFull: "参考价值 897.497693万–987.247462万",
+          img: "assets/images/jd-181083.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572237833#/detail/181083&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181082",
+          location: "zhonghai",
+          locationName: "中海花园",
+          typeName: "商业用房",
+          address: "淮海路东侧中海花园16号楼",
+          area: 7310.87,
+          priceText: "¥3,831.17万起",
+          priceFull: "参考价值 3,831.170708万–4,214.287779万",
+          img: "assets/images/jd-181082.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572316694#/detail/181082&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181084",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城21幢01号1-2层商铺",
+          area: 975.43,
+          priceText: "¥793.89万起",
+          priceFull: "参考价值 793.889399万–873.278339万",
+          img: "assets/images/jd-181084.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572350114#/detail/181084&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181086",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城23幢02号1-2层商铺",
+          area: 162.34,
+          priceText: "¥124.89万起",
+          priceFull: "参考价值 124.885244万–137.373768万",
+          img: "assets/images/jd-181086.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572400682#/detail/181086&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181090",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城26幢04号1-2层商铺",
+          area: 112.77,
+          priceText: "¥86.53万起",
+          priceFull: "参考价值 86.534102万–95.187512万",
+          img: "assets/images/jd-181090.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572423587#/detail/181090&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181089",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城25幢01-05号1-2层商铺",
+          area: 602.35,
+          priceText: "¥463.50万起",
+          priceFull: "参考价值 463.501187万–509.851306万",
+          img: "assets/images/jd-181089.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572445421#/detail/181089&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181087",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城24幢01号1-2层商铺",
+          area: 153.75,
+          priceText: "¥117.95万起",
+          priceFull: "参考价值 117.949787万–129.744766万",
+          img: "assets/images/jd-181087.jpg",
+          focal: "32% 50%",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572466491#/detail/181087&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181092",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城29幢03号1-2层商铺",
+          area: 137.73,
+          priceText: "¥105.99万起",
+          priceFull: "参考价值 105.991128万–116.590241万",
+          img: "assets/images/jd-181092.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572521099#/detail/181092&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181088",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城24幢02/03/07号1-2层商铺",
+          area: 361.77,
+          priceText: "¥278.35万起",
+          priceFull: "参考价值 278.345748万–306.180323万",
+          img: "assets/images/jd-181088.jpg",
+          focal: "68% 50%",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572487727#/detail/181088&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "181093",
+          location: "huasheng",
+          locationName: "华盛新城",
+          typeName: "商业用房",
+          address: "学苑路南侧华盛新城50幢07/08号1-2层商铺",
+          area: 764.7,
+          priceText: "¥588.47万起",
+          priceFull: "参考价值 588.467064万–647.31377万",
+          img: "assets/images/jd-181093.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792572539739#/detail/181093&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "178975",
+          location: "jindi",
+          locationName: "金帝新城",
+          typeName: "商业用房",
+          address: "学苑路南侧金帝新城1幢商住楼1-2层",
+          area: 2104.36,
+          priceText: "¥1,457.47万起",
+          priceFull: "参考价值 1,457.47281万起",
+          img: "assets/images/jd-178975.jpg",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792575281627#/detail/178975&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "178972",
+          location: "zhongyuan",
+          locationName: "中原大街",
+          typeName: "商业用房",
+          address: "中原大街北侧中原美景1幢112号商铺",
+          area: 723.12,
+          priceText: "¥653.69万起",
+          priceFull: "参考价值 653.69119万起",
+          img: "assets/images/jd-178972.jpg",
+          focal: "30% 50%",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792575299318#/detail/178972&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        },
+        {
+          id: "178973",
+          location: "zhongyuan",
+          locationName: "中原大街",
+          typeName: "商业用房",
+          address: "中原大街北侧中原美景1幢110号商铺",
+          area: 412.25,
+          priceText: "¥353.62万起",
+          priceFull: "参考价值 353.6212万起",
+          img: "assets/images/jd-178973.jpg",
+          focal: "70% 50%",
+          link: "https://mauction.jd.com/zichan/tuijie/index.html?_ts=1792575324433#/detail/178973&ad_od=share&utm_source=harmonyapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends_shareid28fd8b981c1caa7e179257204828680356__&gx=RnAomTM2bzXbmZwQr9YhW7IsLapQHjs&gxd=RnAowW8PPDyLwpAU_IUkDNm_WPGOUQ8"
+        }
       ];
 
       const grid = document.getElementById("property-grid");
@@ -1839,38 +1974,30 @@
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;");
 
-      const formatArea = (area) => Number(area).toLocaleString("en-US", { maximumFractionDigits: 2 });
-      const formatRent = (rent) => Number(rent).toLocaleString("en-US");
+      const formatArea = (area) => Number(area).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
 
-      const cardTemplate = (property) => {
-        const isReference = property.priceType === "reference";
-        const priceAria = isReference
-          ? property.priceFull
-          : `租金每月${formatRent(property.rent)}元`;
-
-        const mediaInner = `
+      const cardTemplate = (property, index) => {
+        const media = `
+          <a class="card-media card-media-link" href="${escapeAttr(property.link)}" target="_blank" rel="noopener noreferrer" aria-label="在京东资产交易平台查看${property.locationName}${property.address}详情（新窗口打开）" title="点击查看京东资产详情">
             <img
               src="${property.img}"
-              alt="${property.link ? "京东资产实景" : property.typeName + "场景示意"}：${property.address}"
-              width="800"
+              alt="京东资产实景：${property.typeName}，${property.address}"
+              width="1200"
               height="800"
-              loading="${property.id <= 4 ? "eager" : "lazy"}"
+              ${property.focal ? `style="object-position:${property.focal}"` : ""}
+              loading="${index < 4 ? "eager" : "lazy"}"
               decoding="async"
             >
-            <span class="card-type">${property.typeName}</span>
+            <span class="card-type">${property.locationName}</span>
             <span class="card-area" aria-hidden="true">${formatArea(property.area)}㎡</span>
-            ${property.link ? `<span class="card-link-hint">京东详情 ${externalIcon}</span>` : ""}`;
-
-        const media = property.link
-          ? `<a class="card-media card-media-link" href="${escapeAttr(property.link)}" target="_blank" rel="noopener noreferrer" aria-label="在京东资产交易平台查看${property.address}详情（新窗口打开）" title="点击查看京东资产详情">${mediaInner}</a>`
-          : `<div class="card-media">${mediaInner}</div>`;
-
-        const price = isReference
-          ? `<span class="price-ref" title="${escapeAttr(property.priceFull)}"><span class="ref-chip">参考价</span>${property.priceText}</span>`
-          : `<span class="price"><small>¥</small>${formatRent(property.rent)}<small>/月</small></span>`;
+            <span class="card-link-hint">京东详情 ${externalIcon}</span>
+          </a>`;
 
         return `
-        <article class="property-card" data-category="${property.type}" aria-label="${property.typeName}，${property.address}，面积${formatArea(property.area)}平方米，${priceAria}">
+        <article class="property-card" data-location="${property.location}" aria-label="${property.typeName}，${property.locationName}，${property.address}，面积${formatArea(property.area)}平方米，${property.priceFull}">
           ${media}
           <div class="card-body">
             <p class="card-address">
@@ -1878,7 +2005,7 @@
               <span>${property.address}</span>
             </p>
             <div class="card-rent">
-              ${price}
+              <span class="price-ref" title="${escapeAttr(property.priceFull)}"><span class="ref-chip">参考价</span>${property.priceText}</span>
             </div>
           </div>
         </article>`;
@@ -1889,14 +2016,14 @@
           const key = button.dataset.filter;
           const count = key === "all"
             ? properties.length
-            : properties.filter((property) => property.type === key).length;
+            : properties.filter((property) => property.location === key).length;
           const counter = button.querySelector("span");
           if (counter) counter.textContent = String(count);
         });
       };
 
       syncFilterCounts();
-      grid.innerHTML = properties.map(cardTemplate).join("");
+      grid.innerHTML = properties.map((property, index) => cardTemplate(property, index)).join("");
 
       const setFilter = (filter) => {
         let visibleCount = 0;
@@ -1906,7 +2033,7 @@
         });
 
         grid.querySelectorAll(".property-card").forEach((card) => {
-          const show = filter === "all" || card.dataset.category === filter;
+          const show = filter === "all" || card.dataset.location === filter;
           card.hidden = !show;
           if (show) visibleCount += 1;
         });
@@ -1915,7 +2042,9 @@
         const label = filter === "all"
           ? ""
           : filterButtons.find((button) => button.dataset.filter === filter)?.childNodes[0].textContent.trim() || "";
-        filterStatus.textContent = `当前显示${label}${visibleCount}套房源`;
+        filterStatus.textContent = filter === "all"
+          ? `当前显示全部${visibleCount}套房源`
+          : `当前显示${label}${visibleCount}套房源`;
       };
 
       filterButtons.forEach((button) => {
