@@ -694,8 +694,8 @@
     }
 
     .filters {
-      display: grid;
-      grid-template-columns: repeat(3, max-content);
+      display: flex;
+      flex-wrap: wrap;
       gap: 7px;
       margin: 17px 0 0;
       padding: 0;
@@ -1539,10 +1539,6 @@
 
       .property-grid {
         gap: 14px;
-      }
-
-      .filters {
-        grid-template-columns: repeat(5, max-content);
       }
 
       .card-body {
