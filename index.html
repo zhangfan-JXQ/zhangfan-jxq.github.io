@@ -9,6 +9,13 @@
   <meta name="description" content="柘城农商银行精选15套商业用房对外招租，真实面积与京东资产参考价，点击图片查看房源详情。">
   <meta property="og:title" content="好铺好房，「租」遇柘城">
   <meta property="og:description" content="柘城农商银行15套商业用房对外招租，真实面积与参考价，点击图片查看京东详情。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhangfan-jxq.github.io/">
+  <meta property="og:image" content="https://zhangfan-jxq.github.io/assets/images/share-cover.jpg">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="1000">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="image_src" href="https://zhangfan-jxq.github.io/assets/images/share-cover.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -2325,6 +2332,64 @@
           image.style.opacity = "0";
         });
       });
+    })();
+  </script>
+
+  <!-- 微信分享：配置公众号 AppID 与签名接口后生效，未配置时自动沿用上方 meta 标签 -->
+  <script>
+    (function () {
+      var WX_SHARE = {
+        appId: "",          // TODO: 公众号 AppID
+        signatureUrl: "",   // TODO: 后端签名接口，返回 { timestamp, nonceStr, signature }
+        title: "好铺好房，「租」遇柘城｜柘城农商银行优质房源招租",
+        desc: "15 套商业用房对外招租，真实面积、真实参考价，点击查看房源详情。"
+      };
+
+      if (!WX_SHARE.appId || !WX_SHARE.signatureUrl) return;
+
+      var pageUrl = location.href.split("#")[0];
+      var shareData = {
+        title: WX_SHARE.title,
+        desc: WX_SHARE.desc,
+        link: pageUrl,
+        imgUrl: new URL("assets/images/share-cover.jpg", pageUrl).href
+      };
+
+      var script = document.createElement("script");
+      script.src = "https://res.wx.qq.com/open/js/jweixin-1.6.0.js";
+      script.onload = function () {
+        var api = WX_SHARE.signatureUrl + (WX_SHARE.signatureUrl.indexOf("?") > -1 ? "&" : "?") + "url=" + encodeURIComponent(pageUrl);
+        fetch(api)
+          .then(function (res) { return res.json(); })
+          .then(function (config) {
+            wx.config({
+              debug: false,
+              appId: config.appId || WX_SHARE.appId,
+              timestamp: config.timestamp,
+              nonceStr: config.nonceStr,
+              signature: config.signature,
+              jsApiList: ["updateAppMessageShareData", "updateTimelineShareData", "onMenuShareAppMessage", "onMenuShareTimeline"]
+            });
+            wx.ready(function () {
+              wx.updateAppMessageShareData(shareData);
+              wx.updateTimelineShareData({
+                title: shareData.title,
+                link: shareData.link,
+                imgUrl: shareData.imgUrl
+              });
+              // 兼容旧版微信客户端
+              wx.onMenuShareAppMessage(shareData);
+              wx.onMenuShareTimeline({
+                title: shareData.title,
+                link: shareData.link,
+                imgUrl: shareData.imgUrl
+              });
+            });
+          })
+          .catch(function (error) { console.warn("微信分享配置失败，已回退 meta 标签", error); });
+      };
+      script.onerror = function () {};
+      document.head.appendChild(script);
     })();
   </script>
 </body>
