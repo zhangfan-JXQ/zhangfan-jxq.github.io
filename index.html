@@ -954,6 +954,146 @@
       }
     }
 
+    .contact-panel {
+      margin: 0 16px 20px;
+      padding: 18px 16px 15px;
+      border: 1px solid rgba(181, 142, 80, 0.22);
+      border-top: 2px solid var(--gold);
+      border-radius: 10px;
+      background: var(--paper);
+      box-shadow: 0 10px 26px rgba(75, 43, 25, 0.05);
+    }
+
+    .contact-panel .section-kicker::before {
+      width: 17px;
+    }
+
+    .contact-panel h2 {
+      margin: 7px 0 0;
+      color: var(--ink);
+      font-family: var(--font-serif);
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+    }
+
+    .contact-panel-intro {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+      letter-spacing: 0.015em;
+      line-height: 1.7;
+    }
+
+    .contact-people {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .person-card {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 11px;
+      padding: 10px 12px;
+      border: 1px solid rgba(181, 142, 80, 0.2);
+      border-radius: 9px;
+      color: inherit;
+      background: #f8f2e7;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .person-avatar {
+      display: grid;
+      width: 37px;
+      height: 37px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid rgba(217, 184, 120, 0.5);
+      border-radius: 50%;
+      color: var(--gold-soft);
+      background: var(--red-800);
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .person-info {
+      display: flex;
+      min-width: 0;
+      flex: 1;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .person-role {
+      color: var(--muted);
+      font-size: 8px;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+    }
+
+    .person-name {
+      color: var(--ink);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    .person-phone {
+      color: var(--red-700);
+      font-family: "DIN Alternate", "Avenir Next", var(--font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+
+    .person-call {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 3px;
+      color: var(--gold-deep);
+      font-size: 9px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .person-call svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    @media (hover: hover) {
+      .person-card:hover {
+        border-color: rgba(181, 142, 80, 0.38);
+        background: #fffaf1;
+        transform: translateY(-1px);
+      }
+    }
+
+    .contact-rule {
+      margin: 13px 0 0;
+      padding-top: 11px;
+      border-top: 1px solid rgba(122, 93, 63, 0.1);
+      color: var(--muted);
+      font-size: 9.5px;
+      line-height: 1.85;
+      text-align: justify;
+    }
+
+    .contact-rule strong {
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
     .notice {
       display: flex;
       gap: 10px;
@@ -1233,10 +1373,14 @@
       line-height: 1.85;
     }
 
+    .contact-sheet .contact-people {
+      margin-top: 15px;
+    }
+
     .contact-method {
       display: flex;
       gap: 12px;
-      margin-top: 17px;
+      margin-top: 10px;
       padding: 14px;
       border: 1px solid rgba(181, 142, 80, 0.17);
       border-radius: 10px;
@@ -1381,6 +1525,11 @@
         margin-left: 22px;
       }
 
+      .contact-panel {
+        margin-right: 22px;
+        margin-left: 22px;
+      }
+
       .property-grid {
         gap: 14px;
       }
@@ -1510,6 +1659,12 @@
       .ref-chip {
         padding: 2px 3px;
         font-size: 7px;
+      }
+    }
+
+    @media (min-width: 500px) {
+      .contact-people {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -1678,6 +1833,44 @@
         </noscript>
       </section>
 
+      <section class="contact-panel" aria-labelledby="contact-panel-title">
+        <div class="section-kicker">CONTACT US</div>
+        <h2 id="contact-panel-title">联系咨询</h2>
+        <p class="contact-panel-intro">欢迎致电，了解房源详情并预约实地看房。</p>
+
+        <div class="contact-people">
+          <a class="person-card" href="tel:18238098688" aria-label="拨打毛经理电话 18238098688">
+            <span class="person-avatar" aria-hidden="true">毛</span>
+            <span class="person-info">
+              <span class="person-role">联系人</span>
+              <span class="person-name">毛经理</span>
+              <span class="person-phone">182 3809 8688</span>
+            </span>
+            <span class="person-call">拨打
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7.1 4.5h2.2l1.1 3.2-1.6 1.1a12.4 12.4 0 0 0 5.4 5.4l1.1-1.6 3.2 1.1v2.2a2.1 2.1 0 0 1-2.2 2.1C10.4 17.6 6.4 13.6 5 7.2A2.1 2.1 0 0 1 7.1 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <a class="person-card" href="tel:13700835466" aria-label="拨打崔经理电话 13700835466">
+            <span class="person-avatar" aria-hidden="true">崔</span>
+            <span class="person-info">
+              <span class="person-role">联系人</span>
+              <span class="person-name">崔经理</span>
+              <span class="person-phone">137 0083 5466</span>
+            </span>
+            <span class="person-call">拨打
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7.1 4.5h2.2l1.1 3.2-1.6 1.1a12.4 12.4 0 0 0 5.4 5.4l1.1-1.6 3.2 1.1v2.2a2.1 2.1 0 0 1-2.2 2.1C10.4 17.6 6.4 13.6 5 7.2A2.1 2.1 0 0 1 7.1 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <p class="contact-rule"><strong>招租说明：</strong>竞租对象为境内企业法人，具有独立承担民事责任能力的其他组织、个体工商户，以及具有完全民事行为能力的自然人。租户不得私自转租房屋，转租须经房屋所有权人同意；其他未尽事项面议。</p>
+      </section>
+
       <section class="notice" aria-label="温馨提示">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.4"/>
@@ -1719,7 +1912,7 @@
       <div class="sheet-grip" aria-hidden="true"></div>
       <div class="sheet-header">
         <div>
-          <p>VIEWING APPOINTMENT</p>
+          <p>CONTACT &amp; VIEWING</p>
           <h2 id="contact-title">预约看房</h2>
         </div>
         <button class="sheet-close" type="button" data-close-contact aria-label="关闭预约看房窗口">
@@ -1729,7 +1922,37 @@
         </button>
       </div>
 
-      <p class="sheet-lead" id="contact-lead">好房源，值得亲眼看看。请前往柘城农商银行各营业网点，向工作人员了解房源详情并登记预约。</p>
+      <p class="sheet-lead" id="contact-lead">好房源，值得亲眼看看。欢迎致电咨询，预约实地看房。</p>
+
+      <div class="contact-people">
+        <a class="person-card" href="tel:18238098688" aria-label="拨打毛经理电话 18238098688">
+          <span class="person-avatar" aria-hidden="true">毛</span>
+          <span class="person-info">
+            <span class="person-role">联系人</span>
+            <span class="person-name">毛经理</span>
+            <span class="person-phone">182 3809 8688</span>
+          </span>
+          <span class="person-call">拨打
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7.1 4.5h2.2l1.1 3.2-1.6 1.1a12.4 12.4 0 0 0 5.4 5.4l1.1-1.6 3.2 1.1v2.2a2.1 2.1 0 0 1-2.2 2.1C10.4 17.6 6.4 13.6 5 7.2A2.1 2.1 0 0 1 7.1 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+        <a class="person-card" href="tel:13700835466" aria-label="拨打崔经理电话 13700835466">
+          <span class="person-avatar" aria-hidden="true">崔</span>
+          <span class="person-info">
+            <span class="person-role">联系人</span>
+            <span class="person-name">崔经理</span>
+            <span class="person-phone">137 0083 5466</span>
+          </span>
+          <span class="person-call">拨打
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7.1 4.5h2.2l1.1 3.2-1.6 1.1a12.4 12.4 0 0 0 5.4 5.4l1.1-1.6 3.2 1.1v2.2a2.1 2.1 0 0 1-2.2 2.1C10.4 17.6 6.4 13.6 5 7.2A2.1 2.1 0 0 1 7.1 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
 
       <div class="contact-method">
         <span class="method-icon" aria-hidden="true">
@@ -1739,7 +1962,7 @@
         </span>
         <div>
           <h3>到店咨询 · 专人接待</h3>
-          <p>请至柘城农商银行任一营业网点，现场查看房源资料，预约实地看房时间。</p>
+          <p>如方便到店，也可前往柘城农商银行任一营业网点，现场了解房源资料并预约看房。</p>
         </div>
       </div>
 
@@ -1750,7 +1973,7 @@
         </div>
         <div class="step">
           <span>02</span>
-          <p>到店登记预约</p>
+          <p>致电登记预约</p>
         </div>
         <div class="step">
           <span>03</span>
