@@ -10,12 +10,14 @@
   <meta property="og:title" content="好铺好房，「拍」见柘城">
   <meta property="og:description" content="河南农商银行柘城支行15套商业用房公开出售，真实面积与参考价，点击图片查看京东详情。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zhangfan-jxq.github.io/">
-  <meta property="og:image" content="https://zhangfan-jxq.github.io/assets/images/share-cover.jpg">
+  <meta property="og:url" content="https://wap.only-cl.com/">
+  <meta property="og:image" content="https://wap.only-cl.com/assets/images/share-cover.jpg?v=20261028">
   <meta property="og:image:width" content="1000">
   <meta property="og:image:height" content="1000">
+  <meta property="og:site_name" content="河南农商银行柘城支行">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="image_src" href="https://zhangfan-jxq.github.io/assets/images/share-cover.jpg">
+  <meta name="twitter:image" content="https://wap.only-cl.com/assets/images/share-cover.jpg?v=20261028">
+  <link rel="image_src" href="https://wap.only-cl.com/assets/images/share-cover.jpg?v=20261028">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -64,6 +66,17 @@
 
     body.modal-open {
       overflow: hidden;
+    }
+
+    /* 仅供微信抓取器提取缩略图，不影响视觉呈现 */
+    .wx-share-graph {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+      pointer-events: none;
     }
 
     button,
@@ -1696,6 +1709,16 @@
   </style>
 </head>
 <body>
+  <!-- 微信分享兜底缩略图：微信抓取器不执行 JS，页面里必须存在一张静态 <img> 才能被提取为缩略图 -->
+  <img
+    class="wx-share-graph"
+    src="assets/images/share-cover.jpg?v=20261028"
+    alt=""
+    aria-hidden="true"
+    width="1000"
+    height="1000"
+  >
+
   <div class="page">
     <header class="hero" id="top">
       <span class="hero-frame" aria-hidden="true"></span>
@@ -2339,12 +2362,23 @@
     })();
   </script>
 
-  <!-- 微信分享：配置公众号 AppID 与签名接口后生效，未配置时自动沿用上方 meta 标签 -->
+  <!--
+    微信分享（JS-SDK）：填好 appId 与 signatureUrl 后即可精确控制标题、描述、缩略图。
+    注意：当前公众号未微信认证，JS-SDK 无法启用（jsapi_ticket 返回 48001），
+    页面已自动回退到「meta 标签 + 页面静态首图」的抓取方案，标题与缩略图可正常显示。
+    若要启用 JS-SDK，需先完成微信认证，前置条件：
+      1. 公众号必须已微信认证（未认证订阅号无分享接口权限）；
+      2. 页面所在域名必须已 ICP 备案，并已填入公众号后台
+         「设置与开发 - 公众号设置 - 功能设置 - JS接口安全域名」，
+         同时把后台下载的 MP_verify_xxxx.txt 放到站点根目录；
+      3. signatureUrl 指向 wx-sign 签名服务，AppSecret 只保存在服务端。
+    未配置时自动沿用上方 meta 标签与页面首图的兜底抓取结果。
+  -->
   <script>
     (function () {
       var WX_SHARE = {
-        appId: "",          // TODO: 公众号 AppID
-        signatureUrl: "",   // TODO: 后端签名接口，返回 { timestamp, nonceStr, signature }
+        appId: "",          // 当前公众号未微信认证，无法获取 jsapi_ticket（48001），JS-SDK 不可用
+        signatureUrl: "",   // 认证后再填 AppID 与签名服务地址，届时上面的注释说明照做即可
         title: "好铺好房，「拍」见柘城｜河南农商银行柘城支行优质资产出售",
         desc: "15 套商业用房公开出售，真实面积、真实参考价，点击查看房源详情。"
       };
@@ -2356,7 +2390,7 @@
         title: WX_SHARE.title,
         desc: WX_SHARE.desc,
         link: pageUrl,
-        imgUrl: new URL("assets/images/share-cover.jpg", pageUrl).href
+        imgUrl: new URL("assets/images/share-cover.jpg?v=20261028", pageUrl).href
       };
 
       var script = document.createElement("script");
